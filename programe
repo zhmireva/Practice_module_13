@@ -1,0 +1,19 @@
+tickets = int(input("Введите количество билетов:"))
+count = 0
+for i in range (tickets):
+    years = int(input("Пожалуйста введите свой возраст:"))
+    i += 1
+    if years < 18:
+        count += 0
+        print ("Билет бесплатный")
+    elif 18 <= years < 25:
+        count += 990
+        print ("Стоимость билета: 990 руб.")
+    elif years >= 25:
+        count += 1390
+        print ("Стоимость билета 1390 руб.")
+if tickets > 3:
+    count = int (count - ((count/100) * 10))
+    print(f"Сумма к оплате {count} руб. с учетом скидки 10% на полную стоимость заказа")
+else:
+    print(f"Сумма к оплате {count} руб.")
